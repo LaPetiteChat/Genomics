@@ -1,0 +1,15 @@
+install.packages("installr")
+library(installr)
+updateR()
+install.packages("scales")
+install.packages("ggplot2")
+install.packages("tidyverse")
+install.packages("dslabs")
+install.packages('rstan')
+install.packages("nycflights13", "gapminder", "Lahman")
+library("tidyverse")
+library("dslabs")
+data(murders)
+
+murders %>%
+  ggplot(aes(population, total, label=abb, color=region))+geom_label()
